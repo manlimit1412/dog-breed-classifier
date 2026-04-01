@@ -79,7 +79,7 @@ else:
 st.divider()
 
 # ---- Predict ----
-if st.button("🔮 ทำนายสายพันธุ์", type="primary", use_container_width=True):
+if st.button("ทำนายสายพันธุ์", type="primary", use_container_width=True):
 
     if demo_mode:
         # Demo mode
