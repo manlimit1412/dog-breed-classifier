@@ -5,7 +5,7 @@ pages/2_NN_Model_Info.py
 
 import streamlit as st
 
-st.set_page_config(page_title="NN Model Info", page_icon="", layout="wide")
+st.set_page_config(page_title="🗁NN Model Info", page_icon="", layout="wide")
 
 st.title("Neural Network — EfficientNetB0")
 st.caption("จำแนกสายพันธุ์สุนัข 70 สายพันธุ์จากรูปภาพ")
