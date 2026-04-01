@@ -8,7 +8,7 @@ import numpy as np
 import joblib
 import os
 
-st.set_page_config(page_title="ML Predict", page_icon="", layout="wide")
+st.set_page_config(page_title="🗁 ML Predict", layout="wide")
 st.title("ทดสอบ Ensemble ML Model")
 st.caption("กรอกข้อมูลลักษณะสุนัข")
 
