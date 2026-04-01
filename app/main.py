@@ -5,13 +5,12 @@ Dog Breed Classifier Web App
 import streamlit as st
 
 st.set_page_config(
-    page_title="Dog Breed Classifier 🐶",
-    page_icon="🐕",
+    page_title="Dog Breed Classifier",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.title("Dog Breed Classifier")
+st.title("Dog Breed Classifier 🐶")
 
 st.markdown("""
 ยินดีต้อนรับสู่ระบบแบ่งประเภทสุนัข
