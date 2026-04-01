@@ -10,7 +10,7 @@ import os
 from PIL import Image
 
 st.set_page_config(page_title="NN Predict", page_icon="📷", layout="wide")
-st.title("📷 ทดสอบ Neural Network — Dog Breed Detection")
+st.title("ทดสอบ Neural Network — Dog Breed Detection")
 st.caption("อัปโหลดรูปสุนัข เพื่อทำนายสายพันธุ์ด้วย EfficientNetB0")
 
 # ---- Load Model ----
@@ -45,7 +45,7 @@ else:
 st.divider()
 
 # ---- Upload Image ----
-st.subheader("📤 อัปโหลดรูปสุนัข")
+st.subheader("อัปโหลดรูปสุนัข")
 
 uploaded = st.file_uploader(
     "เลือกรูปภาพสุนัข (JPG, PNG, WEBP)",
