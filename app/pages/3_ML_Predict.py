@@ -9,7 +9,7 @@ import joblib
 import os
 
 st.set_page_config(page_title="ML Predict", page_icon="🔍", layout="wide")
-st.title("🔍 ทดสอบ Ensemble ML Model")
+st.title("ทดสอบ Ensemble ML Model")
 st.caption("กรอกข้อมูลลักษณะสุนัข เพื่อทำนายกลุ่มสายพันธุ์")
 
 # ---- Load Model ----
@@ -30,17 +30,17 @@ def load_model():
 model, scaler, encoders = load_model()
 
 if model is None:
-    st.warning("⚠️ ยังไม่พบโมเดล กรุณาเทรนโมเดลก่อนโดยรัน `train_ensemble.py`")
+    st.warning("ยังไม่พบโมเดล กรุณาเทรนโมเดลก่อนโดยรัน `train_ensemble.py`")
     st.info("สาธิต UI ในโหมด Demo (ผลลัพธ์จำลอง)")
     demo_mode = True
 else:
     demo_mode = False
-    st.success("✅ โหลดโมเดลสำเร็จ!")
+    st.success("โหลดโมเดลสำเร็จ!")
 
 st.divider()
 
 # ---- Input Form ----
-st.subheader("📋 กรอกข้อมูลสุนัข")
+st.subheader("กรอกข้อมูลสุนัข")
 
 col1, col2, col3 = st.columns(3)
 
@@ -89,10 +89,10 @@ if st.button("🔮 ทำนายสายพันธุ์", type="primary", 
         pred_idx = np.argmax(probs)
         pred_group = groups[pred_idx]
 
-        st.success(f"### 🐕 กลุ่มสายพันธุ์ที่ทำนาย: **{pred_group}**")
+        st.success(f"### กลุ่มสายพันธุ์ที่ทำนาย: **{pred_group}**")
         st.caption("(ผลลัพธ์จำลอง — Demo Mode)")
 
-        st.subheader("📊 ความน่าจะเป็นทุกกลุ่ม")
+        st.subheader("ความน่าจะเป็นทุกกลุ่ม")
         for g, p in sorted(zip(groups, probs), key=lambda x: -x[1]):
             bar_color = "🟦" if g == pred_group else "⬜"
             st.markdown(f"{bar_color} **{g}** — {p*100:.1f}%")
@@ -122,9 +122,9 @@ if st.button("🔮 ทำนายสายพันธุ์", type="primary", 
             pred_group = encoders["target"].inverse_transform([pred_idx])[0]
             classes = encoders["target"].classes_
 
-            st.success(f"### 🐕 กลุ่มสายพันธุ์ที่ทำนาย: **{pred_group.upper()}**")
+            st.success(f"### กลุ่มสายพันธุ์ที่ทำนาย: **{pred_group.upper()}**")
 
-            st.subheader("📊 ความน่าจะเป็นทุกกลุ่ม")
+            st.subheader("ความน่าจะเป็นทุกกลุ่ม")
             sorted_pairs = sorted(zip(classes, probs), key=lambda x: -x[1])
             for cls, prob in sorted_pairs:
                 bar_color = "🟦" if cls == pred_group else "⬜"
@@ -137,7 +137,7 @@ if st.button("🔮 ทำนายสายพันธุ์", type="primary", 
 st.divider()
 
 # ---- Feature summary ----
-with st.expander("ℹ️ Feature ที่ใช้ในการทำนาย"):
+with st.expander("Feature ที่ใช้ในการทำนาย"):
     st.markdown(f"""
     | Feature | ค่า |
     |---------|-----|
