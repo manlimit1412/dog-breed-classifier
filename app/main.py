@@ -1,9 +1,5 @@
-"""
-main.py — Streamlit Entry Point
-Dog Breed Classifier Web App
-"""
-
 import streamlit as st
+from pathlib import Path
 
 st.set_page_config(
     page_title="Dog Breed Classifier",
@@ -12,7 +8,11 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.title("Dog Breed Classifier")
+col1, col2 = st.columns([0.1, 0.9])
+with col1:
+    st.image("assets/dog_icon.png", width=80)
+with col2:
+    st.title("Dog Breed Classifier")
 st.markdown("""
 ยินดีต้อนรับสู่ระบบแบ่งประเภทสุนัข
 
