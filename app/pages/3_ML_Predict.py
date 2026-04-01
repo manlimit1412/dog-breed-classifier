@@ -8,9 +8,9 @@ import numpy as np
 import joblib
 import os
 
-st.set_page_config(page_title="ML Predict", page_icon="🔍", layout="wide")
+st.set_page_config(page_title="ML Predict", page_icon="", layout="wide")
 st.title("ทดสอบ Ensemble ML Model")
-st.caption("กรอกข้อมูลลักษณะสุนัข เพื่อทำนายกลุ่มสายพันธุ์")
+st.caption("กรอกข้อมูลลักษณะสุนัข")
 
 # ---- Load Model ----
 @st.cache_resource
@@ -35,7 +35,7 @@ if model is None:
     demo_mode = True
 else:
     demo_mode = False
-    st.success("โหลดโมเดลสำเร็จ!")
+    st.success("โหลดโมเดลสำเร็จ")
 
 st.divider()
 
@@ -89,7 +89,7 @@ if st.button("ทำนายสายพันธุ์", type="primary", use_c
         pred_idx = np.argmax(probs)
         pred_group = groups[pred_idx]
 
-        st.success(f"### กลุ่มสายพันธุ์ที่ทำนาย: **{pred_group}**")
+        st.success(f"### ทำนายสายพันธุ์: **{pred_group}**")
         st.caption("(ผลลัพธ์จำลอง — Demo Mode)")
 
         st.subheader("ความน่าจะเป็นทุกกลุ่ม")
