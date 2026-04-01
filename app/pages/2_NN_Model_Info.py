@@ -5,9 +5,9 @@ pages/2_NN_Model_Info.py
 
 import streamlit as st
 
-st.set_page_config(page_title="NN Model Info", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="NN Model Info", page_icon="", layout="wide")
 
-st.title("🧠 Neural Network — EfficientNetB0")
+st.title("Neural Network — EfficientNetB0")
 st.caption("จำแนกสายพันธุ์สุนัข 70 สายพันธุ์จากรูปภาพ")
 
 # ---- Dataset ----
@@ -15,7 +15,7 @@ st.header("1. การเตรียมข้อมูล (Image Preprocessing
 
 col1, col2 = st.columns(2)
 with col1:
-    st.subheader("📁 Dataset")
+    st.subheader("Dataset")
     st.markdown("""
 **ที่มา:** 70 Dog Breeds Image Dataset — Kaggle  
 **ประเภท:** Unstructured Data (รูปภาพ)  
@@ -35,7 +35,7 @@ images/
     """)
 
 with col2:
-    st.subheader("🧹 ขั้นตอน Preprocessing")
+    st.subheader("ขั้นตอน Preprocessing")
     st.markdown("""
 **ความไม่สมบูรณ์ของข้อมูล:**
 - รูปภาพขนาดไม่เท่ากัน
@@ -60,7 +60,7 @@ st.divider()
 # ---- Algorithm Theory ----
 st.header("2. ทฤษฎีของอัลกอริทึม")
 
-tabs = st.tabs(["🏗️ CNN พื้นฐาน", "⚡ EfficientNet", "🔄 Transfer Learning", "🎛️ Fine-tuning"])
+tabs = st.tabs(["CNN พื้นฐาน", "EfficientNet", "Transfer Learning", "Fine-tuning"])
 
 with tabs[0]:
     st.subheader("Convolutional Neural Network (CNN)")
