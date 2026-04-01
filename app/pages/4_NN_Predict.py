@@ -35,12 +35,12 @@ def load_nn_model():
 model, idx_to_class = load_nn_model()
 
 if model is None:
-    st.warning("⚠️ ยังไม่พบโมเดล กรุณาเทรนโมเดลก่อนโดยรัน `train_efficientnet.py`")
+    st.warning("ยังไม่พบโมเดล กรุณาเทรนโมเดลก่อนโดยรัน `train_efficientnet.py`")
     st.info("สาธิต UI ในโหมด Demo (ผลลัพธ์จำลอง)")
     demo_mode = True
 else:
     demo_mode = False
-    st.success("✅ โหลดโมเดล EfficientNetB0 สำเร็จ!")
+    st.success("โหลดโมเดล EfficientNetB0 สำเร็จ!")
 
 st.divider()
 
@@ -76,7 +76,7 @@ if uploaded:
                     sorted_pairs = sorted(zip(demo_breeds, probs), key=lambda x: -x[1])[:TOP_K]
                     top_breed = sorted_pairs[0][0].replace("_", " ").title()
 
-                    st.success(f"### 🐕 สายพันธุ์: **{top_breed}**")
+                    st.success(f"### สายพันธุ์: **{top_breed}**")
                     st.caption("(ผลลัพธ์จำลอง — Demo Mode)")
 
                 else:
@@ -94,19 +94,19 @@ if uploaded:
                         for i in top_indices
                     ]
                     top_breed = sorted_pairs[0][0].replace("_", " ").title()
-                    st.success(f"### 🐕 สายพันธุ์: **{top_breed}**")
+                    st.success(f"### สายพันธุ์: **{top_breed}**")
 
-                st.subheader(f"📊 Top-{TOP_K} Predictions")
+                st.subheader(f"Top-{TOP_K} Predictions")
                 for rank, (breed, prob) in enumerate(sorted_pairs, 1):
                     breed_display = breed.replace("_", " ").title()
-                    bar_color = "🥇" if rank == 1 else ("🥈" if rank == 2 else "🥉" if rank == 3 else "▫️")
+                    bar_color = "1" if rank == 1 else ("2" if rank == 2 else "3" if rank == 3 else "▫️")
                     st.markdown(f"{bar_color} **{breed_display}** — {prob*100:.2f}%")
                     st.progress(float(prob))
 
 st.divider()
 
 # ---- Model Info Summary ----
-with st.expander("ℹ️ ข้อมูลโมเดล"):
+with st.expander("ข้อมูลโมเดล"):
     st.markdown("""
     | Parameter | ค่า |
     |-----------|-----|
@@ -118,4 +118,4 @@ with st.expander("ℹ️ ข้อมูลโมเดล"):
     | Loss | Categorical Cross-Entropy |
     """)
 
-st.caption("🔬 โมเดล Neural Network ใช้ Transfer Learning จาก EfficientNetB0 (ImageNet pretrained)")
+st.caption("โมเดล Neural Network ใช้ Transfer Learning จาก EfficientNetB0 (ImageNet pretrained)")
