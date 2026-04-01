@@ -5,7 +5,7 @@ pages/1_ML_Model_Info.py
 
 import streamlit as st
 
-st.set_page_config(page_title="ML Model Info", page_icon="📊", layout="wide")
+st.set_page_config(page_title="🗁 ML Model Info", layout="wide")
 
 st.title("Ensemble Machine Learning Model")
 st.caption("จำแนกกลุ่มพันธุ์สุนัข (Dog Breed Group Classification)")
