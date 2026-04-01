@@ -5,7 +5,7 @@ Dog Breed Classifier Web App
 import streamlit as st
 
 st.set_page_config(
-    page_title="Dog Breed Classifier",
+    page_title="Dog Breed Classifier 🐶",
     page_icon="🐕",
     layout="wide",
     initial_sidebar_state="expanded"
