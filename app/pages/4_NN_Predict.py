@@ -62,7 +62,7 @@ if uploaded:
         st.image(img, caption="รูปที่อัปโหลด", use_column_width=True)
 
     with col2:
-        if st.button("🔮 ทำนายสายพันธุ์", type="primary", use_container_width=True):
+        if st.button("ทำนายสายพันธุ์", type="primary", use_container_width=True):
             with st.spinner("กำลังวิเคราะห์รูปภาพ..."):
 
                 if demo_mode:
