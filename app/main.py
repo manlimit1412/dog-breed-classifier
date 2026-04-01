@@ -10,7 +10,7 @@ st.set_page_config(
 
 col1, col2 = st.columns([0.1, 0.9])
 with col1:
-    st.image("assets/dog_icon.png", width=80)
+    st.image("golden-retriever_4600293.png", width=80)
 with col2:
     st.title("Dog Breed Classifier")
 st.markdown("""
