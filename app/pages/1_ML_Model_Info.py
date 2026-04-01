@@ -7,7 +7,7 @@ import streamlit as st
 
 st.set_page_config(page_title="ML Model Info", page_icon="📊", layout="wide")
 
-st.title("📊 Ensemble Machine Learning Model")
+st.title("Ensemble Machine Learning Model")
 st.caption("จำแนกกลุ่มพันธุ์สุนัข (Dog Breed Group Classification)")
 
 # ---- Dataset ----
@@ -15,7 +15,7 @@ st.header("1. การเตรียมข้อมูล (Data Preprocessing)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.subheader("📁 Dataset")
+    st.subheader("Dataset")
     st.markdown("""
 **ที่มา:** Dog Breeds Stats — Kaggle  
 **ประเภท:** Structured Data (CSV)  
@@ -34,7 +34,7 @@ with col1:
     """)
 
 with col2:
-    st.subheader("🧹 ขั้นตอน Preprocessing")
+    st.subheader("ขั้นตอน Preprocessing")
     st.markdown("""
 **ความไม่สมบูรณ์ของข้อมูล:**
 - Missing values ใน numeric columns
@@ -58,7 +58,7 @@ st.divider()
 # ---- Algorithm Theory ----
 st.header("2. ทฤษฎีของอัลกอริทึม")
 
-tabs = st.tabs(["🌲 Random Forest", "⚡ XGBoost", "🎯 SVM", "📍 KNN", "🗳️ Voting Ensemble"])
+tabs = st.tabs(["Random Forest", "XGBoost", "SVM", "KNN", "Voting Ensemble"])
 
 with tabs[0]:
     st.subheader("Random Forest")
